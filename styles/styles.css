@@ -1,3 +1,5 @@
+/* Video youtube pour la page accueil: https://youtu.be/-u3vE84Wo_U?si=Xb3oAs-ysXqo82Ml */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
@@ -37,17 +39,6 @@ header{
     z-index: 100;
 }
 
-.logo{
-    font-size: 3rem;
-    color: #3A7D44; /* bleu principal */
-    font-weight: 800;
-    cursor:pointer;
-    transition: 0.5s ease;
-}
-
-.logo:hover{
-    transform:scale(1.1);
-}
 
 nav a{
     font-size: 1.8rem;
@@ -104,6 +95,7 @@ span{
     cursor: pointer;
     transition: 0.2s linear;
 }
+
 
 .accueil-img img:hover{
     font-size: 1.8rem;
