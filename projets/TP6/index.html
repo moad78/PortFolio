@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire d'inscription</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<h1>Formulaire d’inscription</h1>
+<form>
+  <table>
+    <tr>
+      <td><label for="nom_util" class="l1">Nom d'utilisateur:</label></td>
+      <td><input type="text" id="nomutil" name="nom" required></td>
+    </tr>
+    <tr>
+      <td><label for="mdp" class="l1">Mot de passe :</label></td>
+      <td><input type="password" id="mdp" name="m_d_p" required></td>
+    </tr>
+    <tr>
+      <td><label for="mdp_confirm">Confirmation du mot de passe :</label></td>
+      <td><input type="password" id="mdp_confirm" name="mdp_confirm" required></td>
+    </tr>
+    <tr>
+      <td><label for="email">Email:</label></td>
+      <td><input type="email" id="email" name="email" required></td>
+    </tr>
+    <tr>
+      <td><label for="ddn">Date de naissance :</label></td>
+      <td><input type="date" id="ddn" name="date_naissance" required></td>
+    </tr>
+    <tr>
+      <td><label>Genre :</label></td>
+      <td>
+        <input type="radio" id="male" name="genre" value="Homme" required>
+        <label for="male">Homme</label>
+
+        <input type="radio" id="female" name="genre" value="Femme" required>
+        <label for="female">Femme</label>
+
+        <input type="radio" id="autre" name="genre" value="Autre" required>
+        <label for="autre">Autre</label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>
+          <input type="checkbox" id="conditions" required>
+          <span>J’accepte les conditions générales</span>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="submit" value="S'inscrire" id="submit" >
+      </td>
+    </tr>
+  </table>
+</form>
+
+</body>
+</html>
