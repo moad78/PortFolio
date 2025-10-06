@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  background: #E35E50;
+  background: linear-gradient(360deg, rgba(227, 94, 80, 1) 0%, rgba(239, 133, 122, 1) 52%, rgba(250, 210, 206, 1) 100%);
+}
+
+
+/* --- header et la barre de navigation  --- */
+
+header {
+  position: fixed;  
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  background: #c0392b;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,.2);
+}
+
+header .barre {        
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+
+}
+
+.logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-liens {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-liens a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: color .2s ease;
+}
+
+.nav-liens a:hover,.nav-liens a.active { 
+  color: rgba(255, 193, 186, 0.9); 
+  border-bottom: 3px solid rgba(255, 193, 186, 0.9);
+}
+
+/* --- titre preincipale entre header et section --- */
+
+.titre-site {
+  text-align: center;
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 2.5rem;
+  color: #c0392b;
+  font-weight: 700;
+  margin-top: 200px; /* espace sous le header fixé */
+  letter-spacing: 1.2px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Section de l'accueil --- */
+
+section {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  margin-top: -150px;
+  overflow: hidden;
+}
+
+/* --- Contenue accueil ( slogant + intro) --- */
+
+section .accueil-contenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  max-width: 1000px;
+  background-color: rgba(192, 57, 43, 0.9);
+  padding: 50px 60px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+section .accueil-contenu h1 {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  line-height: 1.3;
+}
+
+section .accueil-contenu p {
+  font-size: 1.15rem;
+  color: #fff;
+  line-height: 1.8;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  max-width: 750px;
+}
+
+/* --- liens vers le menu --- */
+
+.btn-menu {
+  background-color: #c0392b;
+  color: white;
+  padding: 14px 35px;
+  margin-top: 2rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s;
+}
+
+.btn-menu:hover {
+  background-color: #a0281f;
+  transform: scale(1.07);
+  box-shadow: 0 6px 15px rgba(192, 57, 43, 0.6);
+}
+
+
+/* --- MENU HAMBURGER --- */
+
+.menu-toggle {
+  display: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Affiche le menu burger sur mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-liens {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: #c0392b;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.5rem 0;
+    display: none; /* masqué par défaut */
+  }
+
+  .nav-liens.active {
+    display: flex; /* affiché quand on clique sur le burger */
+    animation: slideDown 0.3s ease;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* 🌐 --- RESPONSIVE DESIGN --- */
+
+/* Tablettes (max 1024px) */
+@media (max-width: 1024px) {
+  .titre-site {
+    font-size: 2rem;
+    margin-top: 160px;
+  }
+
+  section .accueil-contenu {
+    max-width: 90%;
+    padding: 40px 30px;
+  }
+
+  section .accueil-contenu h1 {
+    font-size: 2.4rem;
+  }
+
+  section .accueil-contenu p {
+    font-size: 1rem;
+  }
+
+  .btn-menu {
+    padding: 12px 28px;
+    font-size: 1rem;
+  }
+}
+
+/* Mobiles larges (max 768px) */
+@media (max-width: 768px) {
+  header .barre {
+    padding: 10px 20px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .nav-liens {
+    display: none; /* masqué sur mobile, remplacé par le menu burger */
+  }
+
+  .titre-site {
+    font-size: 1.8rem;
+    margin-top: 140px;
+  }
+
+  section .accueil-contenu {
+    max-width: 90%;
+    padding: 30px 20px;
+  }
+
+  section .accueil-contenu h1 {
+    font-size: 2rem;
+  }
+
+  section .accueil-contenu p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .btn-menu {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Petits écrans / smartphones compacts (max 480px) */
+@media (max-width: 480px) {
+  .titre-site {
+    font-size: 1.5rem;
+    margin-top: 120px;
+  }
+
+  section .accueil-contenu h1 {
+    font-size: 1.6rem;
+  }
+
+  section .accueil-contenu p {
+    font-size: 0.9rem;
+  }
+
+  .btn-menu {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+}

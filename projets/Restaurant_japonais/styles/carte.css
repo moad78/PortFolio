@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Poppins:wght@400;600&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(
+    360deg,
+    rgba(227, 94, 80, 1) 0%,
+    rgba(239, 133, 122, 1) 40%,
+    rgba(250, 210, 206, 1) 100%
+  );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #222;
+}
+
+
+/* --- header et la barre de navigation  --- */
+
+header {
+  position: fixed;  
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  background: #c0392b;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,.2);
+}
+
+header .barre {        
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+
+}
+
+.logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-liens {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-liens a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: color .2s ease;
+}
+
+.nav-liens a:hover,.nav-liens a.active { 
+  color: rgba(255, 193, 186, 0.9); 
+  border-bottom: 3px solid rgba(255, 193, 186, 0.9);
+}
+
+
+/* ==================== SECTION MENUS ==================== */
+.menus {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  padding: 40px 20px;
+}
+
+/* Carte commune */
+.menus .carte {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.menus .carte:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Image */
+.menus .perso img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Nom du menu */
+.menus .infos h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.8rem;
+  margin: 10px 0;
+  color: #c0392b;
+}
+
+/* Description */
+.menus .infos p {
+  color: #444;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Prix */
+.menus .infos .prix {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #c0392b;
+  margin-top: 10px;
+}
+
+/* Thèmes des menus */
+.menu-sushi {
+  background: linear-gradient(180deg, #fff3e0, #ffd28a);
+  border: 2px solid #e67e22;
+}
+
+.menu-ramen {
+  background: linear-gradient(180deg, #ffe0e0, #ffb3b3);
+  border: 2px solid #c0392b;
+}
+
+.menu-bento {
+  background: linear-gradient(180deg, #e6ffe0, #a3ffb3);
+  border: 2px solid #2ecc71;
+}
+
+
+/* --- MENU HAMBURGER --- */
+
+.menu-toggle {
+  display: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Affiche le menu burger sur mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-liens {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: #c0392b;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.5rem 0;
+    display: none; /* masqué par défaut */
+  }
+
+  .nav-liens.active {
+    display: flex; /* affiché quand on clique sur le burger */
+    animation: slideDown 0.3s ease;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
