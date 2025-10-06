@@ -1,0 +1,1219 @@
+
+* {
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  margin: 0;
+  padding: 20px;
+
+  
+  background-color: #f5f5f5;
+  background: url("img/arriere/back.jpeg") center/cover no-repeat fixed;
+
+ 
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.05); 
+  backdrop-filter: blur(2.5px); 
+  z-index: -1;
+}
+
+
+.equipe7 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+
+.titre-equipe {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  margin: 60px 0 20px;
+  color: #333;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/*  Style pour les cartes */
+
+.carte {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 12px rgba(0,0,0,0.2);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* effet au survol */
+.carte:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Image du ninja */
+.perso img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Infos générales */
+.infos {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.infos h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+.infos p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Techniques */
+.technique ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.technique li {
+  list-style-type: none;
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Chakra (barre d'énergie) */
+.chakra {
+  width: 100%;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.chakra div {
+  height: 100%;
+  transition: width 0.8s ease;
+  animation: chakraFill 1.5s ease forwards;
+}
+
+@keyframes chakraFill {
+  from { width: 0%; }
+  to { width: 70%; }
+}
+
+/* Perso Kakashi */
+.kakashi {
+  background: linear-gradient(180deg, #d3d9e3, #a0aec0);
+  border: 2px solid #475569; /* gris acier */
+}
+
+.kakashi .perso img {
+  border: 3px solid #64748b; /* bleu acier */
+}
+
+.kakashi .technique li {
+  border-color: #64748b;
+  background-color: #f1f5f9;
+}
+
+.kakashi .technique li:hover {
+  background-color: #cbd5e1;
+  box-shadow: 0 0 10px rgba(100, 116, 139, 0.4);
+}
+
+.kakashi .chakra div {
+  background-color: #64748b; /* gris bleuté */
+  width: 65%; /* niveau de chakra intermédiaire */
+  animation-duration: 1.3s;
+}
+
+/* Effet d'aura au survol */
+.kakashi:hover {
+  box-shadow: 0 0 25px rgba(148, 163, 184, 0.7);
+}
+
+/* Perso Naruto */
+
+.naruto {
+  background: linear-gradient(180deg, #fdd9a0, #f7c46c);
+  border: 2px solid #e88c17;
+}
+
+.naruto .perso img {
+  border: 3px solid orange;
+}
+
+.naruto .technique li {
+  background-color: #fff3e0;
+  border: 1px solid #ffae42;
+}
+
+.naruto .technique li:hover {
+  background-color: #ffd28a;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.naruto .chakra div {
+  background-color: orange;
+  width: 70%;
+}
+
+.naruto:hover {
+  box-shadow: 0 0 25px rgba(255, 165, 0, 0.6);
+}
+
+
+/* Perso Sasuke */
+
+.sasuke {
+  background: linear-gradient(180deg, #a3c4ff, #6b8cff);
+  border: 2px solid #1e3a8a;
+}
+
+.sasuke .perso img {
+  border: 3px solid #2563eb;
+}
+
+.sasuke .technique li {
+  border-color: #2563eb;
+  background-color: #e0edff;
+}
+
+.sasuke .technique li:hover {
+  background-color: #bcd4ff;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+
+.sasuke .chakra div {
+  background-color: #2563eb;
+  width: 60%;
+  animation-duration: 1.2s;
+}
+
+.sasuke:hover {
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.6);
+}
+
+/* Perso Sakura */
+
+.sakura {
+  background: linear-gradient(180deg, #ff9ecb, #ec4899);
+  border: 2px solid #fd1f87;
+}
+
+.sakura .perso img {
+  border: 3px solid pink;
+}
+
+.sakura .technique li {
+  background-color: #ffd5e9;
+  border: 1px solid #ff7dbc;
+}
+
+.sakura .technique li:hover {
+  background-color: #ffa2cf;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.sakura .chakra div {
+  background-color: #fa9fcc;
+  width: 70%;
+}
+
+.sakura:hover {
+  box-shadow: 0 0 25px #ff9ecb;
+}
+
+
+
+.equipe10 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* 🌀 Asuma */
+.asuma {
+  background: linear-gradient(180deg, #c8b89a, #9c8363);
+  border: 2px solid #4b3b24;
+}
+
+.asuma .perso img {
+  border: 3px solid #6b4f2a;
+}
+
+.asuma .technique li {
+  border-color: #6b4f2a;
+  background-color: #f2e1c3;
+}
+
+.asuma .technique li:hover {
+  background-color: #b89260;
+  box-shadow: 0 0 10px rgba(107, 79, 42, 0.5);
+}
+
+.asuma .chakra div {
+  background-color: #6b4f2a;
+  width: 65%;
+}
+
+.asuma:hover {
+  box-shadow: 0 0 25px rgba(155, 110, 55, 0.6);
+}
+
+/* 🌸 Ino */
+.ino {
+  background: linear-gradient(180deg, #ffd6f3, #ffb6e5);
+  border: 2px solid #db4ca5;
+}
+
+.ino .perso img {
+  border: 3px solid #e93ba7;
+}
+
+.ino .technique li {
+  border-color: #e93ba7;
+  background-color: #ffe8f6;
+}
+
+.ino .technique li:hover {
+  background-color: #ffcae9;
+  box-shadow: 0 0 10px rgba(219, 76, 165, 0.5);
+}
+
+.ino .chakra div {
+  background-color: #db4ca5;
+  width: 70%;
+}
+
+.ino:hover {
+  box-shadow: 0 0 25px rgba(219, 76, 165, 0.5);
+}
+
+/* 🌀 Shikamaru */
+.shikamaru {
+  background: linear-gradient(180deg, #b8c9b3, #8fae84);
+  border: 2px solid #4a634a;
+}
+
+.shikamaru .perso img {
+  border: 3px solid #597659;
+}
+
+.shikamaru .technique li {
+  border-color: #4a634a;
+  background-color: #dbe8d7;
+}
+
+.shikamaru .technique li:hover {
+  background-color: #cde6cb;
+  box-shadow: 0 0 10px rgba(74, 99, 74, 0.5);
+}
+.shikamaru .chakra div {
+  background-color: #4a634a;
+  width: 80%;
+}
+
+.shikamaru:hover {
+  box-shadow: 0 0 25px rgba(74, 99, 74, 0.5);
+}
+
+/* 🍜 Choji */
+.choji {
+  background: linear-gradient(180deg, #f9caa0, #f7a76c);
+  border: 2px solid #c05c30;
+}
+
+.choji .perso img {
+  border: 3px solid #c05c30;
+}
+
+.choji .technique li {
+  border-color: #c05c30;
+  background-color: #ffe3c9;
+}
+
+.choji .technique li:hover {
+  background-color: #ffcfa0;
+  box-shadow: 0 0 10px rgba(192, 92, 48, 0.5);
+}
+
+.choji .chakra div {
+  background-color: #c05c30;
+  width: 75%;
+}
+
+.choji:hover {
+  box-shadow: 0 0 25px rgba(192, 92, 48, 0.6);
+}
+
+
+/* ------------------------------ */
+/* Équipe 8 (Kurenai, Hinata, Kiba, Shino) */
+/* ------------------------------ */
+
+.equipe8 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+/* 🌺 Kurenai */
+.kurenai {
+  background: linear-gradient(180deg, #f7c2d4, #e27ca3);
+  border: 2px solid #a02c60;
+}
+
+.kurenai .perso img {
+  border: 3px solid #a02c60;
+}
+
+.kurenai .technique li {
+  border-color: #a02c60;
+  background-color: #ffe3ed;
+}
+
+.kurenai .technique li:hover {
+  background-color: #fcbad3;
+  box-shadow: 0 0 10px rgba(160, 44, 96, 0.5);
+}
+
+.kurenai .chakra div {
+  background-color: #a02c60;
+  width: 70%;
+}
+
+.kurenai:hover {
+  box-shadow: 0 0 25px rgba(160, 44, 96, 0.5);
+}
+
+/* 💎 Hinata */
+.hinata {
+  background: linear-gradient(180deg, #d4d9ff, #a5b0ff);
+  border: 2px solid #4f46e5;
+}
+
+.hinata .perso img {
+  border: 3px solid #4f46e5;
+}
+
+.hinata .technique li {
+  border-color: #4f46e5;
+  background-color: #e8ebff;
+}
+
+.hinata .technique li:hover {
+  background-color: #ccd2ff;
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.5);
+}
+
+.hinata .chakra div {
+  background-color: #4f46e5;
+  width: 80%;
+}
+
+.hinata:hover {
+  box-shadow: 0 0 25px rgba(79, 70, 229, 0.5);
+}
+
+/* 🐾 Kiba */
+.kiba {
+  background: linear-gradient(180deg, #ffe5b4, #f6c689);
+  border: 2px solid #b65b14;
+}
+
+.kiba .perso img {
+  border: 3px solid #b65b14;
+}
+
+.kiba .technique li {
+  border-color: #b65b14;
+  background-color: #fff0d6;
+}
+
+.kiba .technique li:hover {
+  background-color: #ffd89f;
+  box-shadow: 0 0 10px rgba(182, 91, 20, 0.5);
+}
+
+.kiba .chakra div {
+  background-color: #b65b14;
+  width: 65%;
+}
+
+.kiba:hover {
+  box-shadow: 0 0 25px rgba(182, 91, 20, 0.6);
+}
+
+/* 🪲 Shino */
+.shino {
+  background: linear-gradient(180deg, #c3d3c3, #a0b4a0);
+  border: 2px solid #506450;
+}
+
+.shino .perso img {
+  border: 3px solid #506450;
+}
+
+.shino .technique li {
+  border-color: #506450;
+  background-color: #e3ede3;
+}
+
+.shino .technique li:hover {
+  background-color: #cce3cc;
+  box-shadow: 0 0 10px rgba(80, 100, 80, 0.5);
+}
+
+.shino .chakra div {
+  background-color: #506450;
+  width: 75%;
+}
+
+.shino:hover {
+  box-shadow: 0 0 25px rgba(80, 100, 80, 0.5);
+}
+
+/* ------------------------------ */
+/* 💥 Équipe 9 (Gai, Lee, Neji, Tenten) */
+/* ------------------------------ */
+
+.equipe9 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+/* 💚 Gaï */
+.gai {
+  background: linear-gradient(180deg, #9de09b, #53b651);
+  border: 2px solid #2e7d32;
+}
+
+.gai .perso img {
+  border: 3px solid #2e7d32;
+}
+
+.gai .technique li {
+  border-color: #2e7d32;
+  background-color: #dbf5da;
+}
+
+.gai .chakra div {
+  background-color: #2e7d32;
+  width: 85%; /* gros chakra 😎 */
+}
+
+.gai .technique li:hover {
+  background-color: #b7e9b5;
+  box-shadow: 0 0 10px rgba(46, 125, 50, 0.5);
+}
+
+.gai:hover {
+  box-shadow: 0 0 25px rgba(46, 125, 50, 0.5);
+}
+
+/* 🥋 Rock Lee */
+.lee {
+  background: linear-gradient(180deg, #b8f0b3, #66cc66);
+  border: 2px solid #2f8f2f;
+}
+
+.lee .perso img {
+  border: 3px solid #2f8f2f;
+}
+
+.lee .technique li {
+  border-color: #2f8f2f;
+  background-color: #e1fbe1;
+}
+
+.lee .chakra div {
+  background-color: #2f8f2f;
+  width: 80%;
+}
+
+.lee .technique li:hover {
+  background-color: #b8f0b3;
+  box-shadow: 0 0 10px rgba(47, 143, 47, 0.5);
+}
+
+.lee:hover {
+  box-shadow: 0 0 25px rgba(47, 143, 47, 0.6);
+}
+
+/* 💫 Neji */
+.neji {
+  background: linear-gradient(180deg, #d2e0ff, #a9c4ff);
+  border: 2px solid #3b5ccc;
+}
+
+.neji .perso img {
+  border: 3px solid #3b5ccc;
+}
+
+.neji .technique li {
+  border-color: #3b5ccc;
+  background-color: #e8f0ff;
+}
+
+.neji .chakra div {
+  background-color: #3b5ccc;
+  width: 75%;
+}
+
+.neji .technique li:hover {
+  background-color: #bfd2ff;
+  box-shadow: 0 0 10px rgba(59, 92, 204, 0.5);
+}
+
+.neji:hover {
+  box-shadow: 0 0 25px rgba(59, 92, 204, 0.5);
+}
+
+/* 🎯 Tenten */
+.tenten {
+  background: linear-gradient(180deg, #ffe6cc, #f5b46b);
+  border: 2px solid #b66a1f;
+}
+
+.tenten .perso img {
+  border: 3px solid #b66a1f;
+}
+
+.tenten .technique li {
+  border-color: #b66a1f;
+  background-color: #fff3e0;
+}
+
+.tenten .chakra div {
+  background-color: #b66a1f;
+  width: 65%;
+}
+
+.tenten .technique li:hover {
+  background-color: #ffd39a;
+  box-shadow: 0 0 10px rgba(182, 106, 31, 0.5);
+}
+
+.tenten:hover {
+  box-shadow: 0 0 25px rgba(182, 106, 31, 0.5);
+}
+
+/* ------------------------------ */
+/* 🏜️ Équipe de Suna (Baki, Temari, Kankuro, Gaara) */
+/* ------------------------------ */
+
+.equipe-suna {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+/*  Baki */
+.baki {
+  background: linear-gradient(180deg, #e4d2b1, #c9b189);
+  border: 2px solid #8b6f45;
+}
+
+.baki .perso img {
+  border: 3px solid #8b6f45;
+}
+
+.baki .technique li {
+  border-color: #8b6f45;
+  background-color: #f3e8ce;
+}
+
+.baki .chakra div {
+  background-color: #8b6f45;
+  width: 70%;
+}
+
+.baki .technique li:hover {
+  background-color: #e4d2b1;
+  box-shadow: 0 0 10px rgba(139, 111, 69, 0.5);
+}
+
+.baki:hover {
+  box-shadow: 0 0 25px rgba(139, 111, 69, 0.5);
+}
+
+/* Temari */
+.temari {
+  background: linear-gradient(180deg, #f0e3c3, #d8c08f);
+  border: 2px solid #9c803e;
+}
+
+.temari .perso img {
+  border: 3px solid #9c803e;
+}
+
+.temari .technique li {
+  border-color: #9c803e;
+  background-color: #faf2db;
+}
+
+.temari .chakra div {
+  background-color: #9c803e;
+  width: 75%;
+}
+
+.temari .technique li:hover {
+  background-color: #e8d7b2;
+  box-shadow: 0 0 10px rgba(156, 128, 62, 0.5);
+}
+
+.temari:hover {
+  box-shadow: 0 0 25px rgba(156, 128, 62, 0.5);
+}
+
+/*  Kankuro */
+.kankuro {
+  background: linear-gradient(180deg, #d6b4a4, #b98773);
+  border: 2px solid #7a4334;
+}
+
+.kankuro .perso img {
+  border: 3px solid #7a4334;
+}
+
+.kankuro .technique li {
+  border-color: #7a4334;
+  background-color: #f2d6cd;
+}
+
+.kankuro .chakra div {
+  background-color: #7a4334;
+  width: 65%;
+}
+
+.kankuro .technique li:hover {
+  background-color: #e3c2b5;
+  box-shadow: 0 0 10px rgba(122, 67, 52, 0.5);
+}
+
+.kankuro:hover {
+  box-shadow: 0 0 25px rgba(122, 67, 52, 0.6);
+}
+
+/*  Gaara */
+.gaara {
+  background: linear-gradient(180deg, #e5c7a9, #b56d4b);
+  border: 2px solid #7a3a26;
+}
+
+.gaara .perso img {
+  border: 3px solid #7a3a26;
+}
+
+.gaara .technique li {
+  border-color: #7a3a26;
+  background-color: #f4e2d2;
+}
+
+.gaara .chakra div {
+  background-color: #7a3a26;
+  width: 90%;
+}
+
+.gaara .technique li:hover {
+  background-color: #e8c9aa;
+  box-shadow: 0 0 10px rgba(122, 58, 38, 0.5);
+}
+
+.gaara:hover {
+  box-shadow: 0 0 25px rgba(122, 58, 38, 0.6);
+}
+
+/* ------------------------------ */
+/* 🩸 Organisation Akatsuki */
+/* ------------------------------ */
+
+.akatsuki .infos p {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(255, 0, 0, 0.5); 
+}
+
+.akatsuki {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+/* 🩸 Style commun Akatsuki */
+.akatsuki .carte {
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+/* 🔥 Itachi */
+.itachi {
+  background: linear-gradient(180deg, #1a1a1a, #3d0000);
+  border: 2px solid #b22222;
+}
+
+.itachi .perso img {
+  border: 3px solid #b22222;
+}
+
+.itachi .technique li {
+  border-color: #b22222;
+  background-color: #2a0000;
+}
+
+.itachi .technique li:hover {
+  background-color: #471010;
+  box-shadow: 0 0 10px rgba(178, 34, 34, 0.6);
+}
+
+.itachi .chakra div {
+  background-color: #b22222;
+  width: 90%;
+}
+
+.itachi:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+}
+
+/* 🌊 Kisame */
+.kisame {
+  background: linear-gradient(180deg, #002030, #013f5c);
+  border: 2px solid #0077b6;
+}
+
+.kisame .perso img {
+  border: 3px solid #0077b6;
+}
+
+.kisame .technique li {
+  border-color: #0077b6;
+  background-color: #023047;
+}
+
+.kisame .technique li:hover {
+  background-color: #035a7d;
+  box-shadow: 0 0 10px rgba(0, 119, 182, 0.6);
+}
+
+.kisame .chakra div {
+  background-color: #0077b6;
+  width: 80%;
+}
+
+.kisame:hover {
+  box-shadow: 0 0 25px rgba(0, 119, 182, 0.5);
+}
+
+/* ☁️ Pain */
+.pain {
+  background: linear-gradient(180deg, #1a1a1a, #5a2c00);
+  border: 2px solid #ff6600;
+}
+
+.pain .perso img {
+  border: 3px solid #ff6600;
+}
+
+.pain .technique li {
+  border-color: #ff6600;
+  background-color: #331700;
+}
+
+.pain .technique li:hover {
+  background-color: #552800;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.6);
+}
+
+.pain .chakra div {
+  background-color: #ff6600;
+  width: 95%;
+}
+
+.pain:hover {
+  box-shadow: 0 0 25px rgba(255, 102, 0, 0.6);
+}
+
+/* 💮 Konan */
+.konan {
+  background: linear-gradient(180deg, #1a1a2e, #4b0082);
+  border: 2px solid #9d4edd;
+}
+
+.konan .perso img {
+  border: 3px solid #9d4edd;
+}
+
+.konan .technique li {
+  border-color: #9d4edd;
+  background-color: #2c1a40;
+}
+
+.konan .technique li:hover {
+  background-color: #53338b;
+  box-shadow: 0 0 10px rgba(157, 78, 221, 0.6);
+}
+
+.konan .chakra div {
+  background-color: #9d4edd;
+  width: 75%;
+}
+
+.konan:hover {
+  box-shadow: 0 0 25px rgba(157, 78, 221, 0.6);
+}
+
+/* 💣 Deidara */
+.deidara {
+  background: linear-gradient(180deg, #2b0000, #8b0000);
+  border: 2px solid #eab308;
+}
+.deidara .perso img { 
+  border: 3px solid #eab308; 
+}
+.deidara .technique li {
+  border-color: #eab308;
+  background-color: #3a1a00;
+}
+.deidara .technique li:hover {
+  background-color: #5a3300;
+  box-shadow: 0 0 10px rgba(234, 179, 8, 0.6);
+}
+.deidara .chakra div { 
+  background-color: #eab308; width: 80%; 
+}
+.deidara:hover { 
+  box-shadow: 0 0 25px rgba(234, 179, 8, 0.6); 
+}
+
+/* 💀 Hidan */
+.hidan {
+  background: linear-gradient(180deg, #1a1a1a, #500000);
+  border: 2px solid #c1121f;
+}
+.hidan .perso img { 
+  border: 3px solid #c1121f; 
+}
+.hidan .technique li {
+  border-color: #c1121f;
+  background-color: #2a0000;
+}
+.hidan .technique li:hover {
+  background-color: #4d0000;
+  box-shadow: 0 0 10px rgba(193, 18, 31, 0.6);
+}
+.hidan .chakra div { 
+  background-color: #c1121f; width: 75%; 
+}
+.hidan:hover { 
+  box-shadow: 0 0 25px rgba(193, 18, 31, 0.6); 
+}
+
+/* 💸 Kakuzu */
+.kakuzu {
+  background: linear-gradient(180deg, #0f0f0f, #004d4d);
+  border: 2px solid #00b8b8;
+}
+.kakuzu .perso img { 
+  border: 3px solid #00b8b8; 
+}
+.kakuzu .technique li {
+  border-color: #00b8b8;
+  background-color: #003030;
+}
+.kakuzu .technique li:hover {
+  background-color: #006666;
+  box-shadow: 0 0 10px rgba(0, 184, 184, 0.6);
+}
+.kakuzu .chakra div { 
+  background-color: #00b8b8; width: 85%; 
+}
+.kakuzu:hover { 
+  box-shadow: 0 0 25px rgba(0, 184, 184, 0.6); 
+}
+
+/* 🕷️ Zetsu */
+.zetsu {
+  background: linear-gradient(180deg, #001a00, #004d00);
+  border: 2px solid #00ff66;
+}
+.zetsu .perso img { 
+  border: 3px solid #00ff66; 
+}
+.zetsu .technique li {
+  border-color: #00ff66;
+  background-color: #002200;
+}
+.zetsu .technique li:hover {
+  background-color: #004400;
+  box-shadow: 0 0 10px rgba(0, 255, 102, 0.6);
+}
+.zetsu .chakra div { 
+  background-color: #00ff66; width: 70%; 
+}
+.zetsu:hover { 
+  box-shadow: 0 0 25px rgba(0, 255, 102, 0.6); 
+}
+
+/* 🧠 Sasori */
+.sasori {
+  background: linear-gradient(180deg, #260000, #5a0d0d);
+  border: 2px solid #a83232;
+}
+.sasori .perso img { 
+  border: 3px solid #a83232; 
+}
+.sasori .technique li {
+  border-color: #a83232;
+  background-color: #330000;
+}
+.sasori .technique li:hover {
+  background-color: #5a0d0d;
+  box-shadow: 0 0 10px rgba(168, 50, 50, 0.6);
+}
+.sasori .chakra div { 
+  background-color: #a83232; width: 80%; 
+}
+.sasori:hover { 
+  box-shadow: 0 0 25px rgba(168, 50, 50, 0.6); 
+}
+
+/* 🌀 Tobi */
+.tobi {
+  background: linear-gradient(180deg, #1a1a1a, #661a00);
+  border: 2px solid #ff6600;
+}
+.tobi .perso img { 
+  border: 3px solid #ff6600; 
+}
+.tobi .technique li {
+  border-color: #ff6600;
+  background-color: #331700;
+}
+.tobi .technique li:hover {
+  background-color: #552800;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.6);
+}
+.tobi .chakra div { 
+  background-color: #ff6600; width: 90%; 
+}
+.tobi:hover { 
+  box-shadow: 0 0 25px rgba(255, 102, 0, 0.6); 
+}
+
+/* ------------------------------ */
+/* Équipe des Sannin Légendaires */
+/* ------------------------------ */
+
+.equipe-sannin {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+/* 🧙‍♂️ Hiruzen */
+.hiruzen {
+  background: linear-gradient(180deg, #f1e2b5, #d9b76b);
+  border: 2px solid #8b6f45;
+}
+.hiruzen .perso img { border: 3px solid #8b6f45; }
+.hiruzen .technique li {
+  border-color: #8b6f45;
+  background-color: #f3e4c5;
+}
+.hiruzen .technique li:hover {
+  background-color: #e5cf9f;
+  box-shadow: 0 0 10px rgba(139, 111, 69, 0.5);
+}
+.hiruzen .chakra div { background-color: #8b6f45; width: 85%; }
+.hiruzen:hover { box-shadow: 0 0 25px rgba(139, 111, 69, 0.6); }
+
+/* 🐍 Orochimaru */
+.orochimaru {
+  background: linear-gradient(180deg, #dcd2f0, #b699e6);
+  border: 2px solid #6b21a8;
+}
+.orochimaru .perso img { border: 3px solid #6b21a8; }
+.orochimaru .technique li {
+  border-color: #6b21a8;
+  background-color: #f3e8ff;
+}
+.orochimaru .technique li:hover {
+  background-color: #dcc4ff;
+  box-shadow: 0 0 10px rgba(107, 33, 168, 0.6);
+}
+.orochimaru .chakra div { background-color: #6b21a8; width: 80%; }
+.orochimaru:hover { box-shadow: 0 0 25px rgba(107, 33, 168, 0.6); }
+
+/* 🐸 Jiraiya */
+.jiraiya {
+  background: linear-gradient(180deg, #ffd8d0, #f48a8a);
+  border: 2px solid #b91c1c;
+}
+.jiraiya .perso img { border: 3px solid #b91c1c; }
+.jiraiya .technique li {
+  border-color: #b91c1c;
+  background-color: #ffe3e3;
+}
+.jiraiya .technique li:hover {
+  background-color: #f5b9b9;
+  box-shadow: 0 0 10px rgba(185, 28, 28, 0.6);
+}
+.jiraiya .chakra div { background-color: #b91c1c; width: 90%; }
+.jiraiya:hover { box-shadow: 0 0 25px rgba(185, 28, 28, 0.6); }
+
+/* 🐌 Tsunade */
+.tsunade {
+  background: linear-gradient(180deg, #c7f9cc, #80ed99);
+  border: 2px solid #2d6a4f;
+}
+.tsunade .perso img { border: 3px solid #2d6a4f; }
+.tsunade .technique li {
+  border-color: #2d6a4f;
+  background-color: #e9ffe8;
+}
+.tsunade .technique li:hover {
+  background-color: #b8f5bf;
+  box-shadow: 0 0 10px rgba(45, 106, 79, 0.5);
+}
+.tsunade .chakra div { background-color: #2d6a4f; width: 95%; }
+.tsunade:hover { box-shadow: 0 0 25px rgba(45, 106, 79, 0.5); }
+
+
+/* ------------------------------ */
+/* Les Quatre Hokage de Konoha */
+/* ------------------------------ */
+
+.hokage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+
+/*  Hashirama */
+.hashirama {
+  background: linear-gradient(180deg, #a8e6a2, #60c060);
+  border: 2px solid #2f9e44;
+}
+.hashirama .perso img { border: 3px solid #2f9e44; }
+.hashirama .technique li {
+  border-color: #2f9e44;
+  background-color: #e1f9e0;
+}
+.hashirama .technique li:hover {
+  background-color: #b8f5b2;
+  box-shadow: 0 0 10px rgba(47, 158, 68, 0.5);
+}
+.hashirama .chakra div { background-color: #2f9e44; width: 95%; }
+.hashirama:hover { box-shadow: 0 0 25px rgba(47, 158, 68, 0.6); }
+
+/* Tobirama */
+.tobirama {
+  background: linear-gradient(180deg, #b3d9ff, #4da6ff);
+  border: 2px solid #1e3a8a;
+}
+.tobirama .perso img { border: 3px solid #1e3a8a; }
+.tobirama .technique li {
+  border-color: #1e3a8a;
+  background-color: #e3f1ff;
+}
+.tobirama .technique li:hover {
+  background-color: #c3e3ff;
+  box-shadow: 0 0 10px rgba(30, 58, 138, 0.5);
+}
+.tobirama .chakra div { background-color: #1e3a8a; width: 85%; }
+.tobirama:hover { box-shadow: 0 0 25px rgba(30, 58, 138, 0.6); }
+
+/*  Hiruzen */
+.hiruzen-hokage {
+  background: linear-gradient(180deg, #ffe8b4, #eab676);
+  border: 2px solid #b85c00;
+}
+.hiruzen-hokage .perso img { border: 3px solid #b85c00; }
+.hiruzen-hokage .technique li {
+  border-color: #b85c00;
+  background-color: #fff1d6;
+}
+.hiruzen-hokage .technique li:hover {
+  background-color: #ffdb9e;
+  box-shadow: 0 0 10px rgba(184, 92, 0, 0.5);
+}
+.hiruzen-hokage .chakra div { background-color: #b85c00; width: 80%; }
+.hiruzen-hokage:hover { box-shadow: 0 0 25px rgba(184, 92, 0, 0.6); }
+
+/* Minato */
+.minato {
+  background: linear-gradient(180deg, #fff7b2, #ffd43b);
+  border: 2px solid #eab308;
+}
+.minato .perso img { border: 3px solid #eab308; }
+.minato .technique li {
+  border-color: #eab308;
+  background-color: #fff7c2;
+}
+.minato .technique li:hover {
+  background-color: #ffe873;
+  box-shadow: 0 0 10px rgba(234, 179, 8, 0.5);
+}
+.minato .chakra div { background-color: #eab308; width: 90%; }
+.minato:hover { box-shadow: 0 0 25px rgba(234, 179, 8, 0.6); }
+
+
+
+/*espacement entre les équipes*/
+
+.equipe7, .equipe8 , .equipe9,.equipe10, .equipe-suna,.akatsuki, .equipe-sannin ,.hokage{
+  margin-bottom: 60px;
+}
