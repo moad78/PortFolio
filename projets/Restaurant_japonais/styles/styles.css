@@ -98,7 +98,7 @@ section .accueil-contenu {
   justify-content: center;
   gap: 1.2rem;
   max-width: 1000px;
-  background-color: rgba(192, 57, 43, 0.9);
+  background-color: rgba(250, 74, 54, 0.9);
   padding: 50px 60px;
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);

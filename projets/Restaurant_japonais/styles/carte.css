@@ -72,6 +72,18 @@ header .barre {
 }
 
 
+.titre-carte {
+  text-align: center;
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 2.5rem;
+  color: #c0392b;
+  font-weight: 700;
+  margin-top: 150px; 
+  letter-spacing: 1.2px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
 /* ==================== SECTION MENUS ==================== */
 .menus {
   display: flex;
@@ -82,6 +94,8 @@ header .barre {
   margin-bottom: 60px;
   padding: 40px 20px;
 }
+
+
 
 /* Carte commune */
 .menus .carte {
@@ -130,19 +144,12 @@ header .barre {
 }
 
 /* Thèmes des menus */
-.menu-sushi {
-  background: linear-gradient(180deg, #fff3e0, #ffd28a);
-  border: 2px solid #e67e22;
-}
-
-.menu-ramen {
-  background: linear-gradient(180deg, #ffe0e0, #ffb3b3);
-  border: 2px solid #c0392b;
-}
-
+.menu-sushi,
+.menu-ramen,
 .menu-bento {
-  background: linear-gradient(180deg, #e6ffe0, #a3ffb3);
-  border: 2px solid #2ecc71;
+  background: linear-gradient(360deg, rgb(255, 193, 186) 40%,
+    rgb(250, 164, 156) 100%);
+  border: 2px solid #c0392b;
 }
 
 
