@@ -189,22 +189,41 @@ form .formulaire .boite{
   cursor: pointer;
 }
 
-/* responsive et animation du hamburger pour les petits écrans */
-@media(max-width:995px) {
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 2rem;
-        right: 4rem;
-        z-index: 101;
-    }
+/* Affiche le menu burger sur mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
 
-    /* Animation du hamburger (croix quand ouvert) */
-    .menu-toggle.open i::before {
-        content: "\f00d"; 
+  .nav-liens {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: #c0392b;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.5rem 0;
+    display: none; /* masqué par défaut */
+  }
+
+  .nav-liens.active {
+    display: flex; /* affiché quand on clique sur le burger */
+    animation: slideDown 0.3s ease;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
     }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
-
 
 /*Responsive*/
 
@@ -229,6 +248,7 @@ form .formulaire .boite{
         margin: 5rem 4rem;
     }
 }
+
 
 
 
