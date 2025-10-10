@@ -224,7 +224,6 @@ form .formulaire .boite{
     }
   }
 }
-
 /*Responsive*/
 
 @media screen and (max-width:920px){
@@ -248,6 +247,7 @@ form .formulaire .boite{
         margin: 5rem 4rem;
     }
 }
+
 
 
 
