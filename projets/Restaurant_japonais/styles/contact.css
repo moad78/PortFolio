@@ -1,0 +1,233 @@
+/* Video youtube pour la page contact: https://youtu.be/W77XNwZKpuE?si=jVomPiquhDAJOYBo */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F5E6C8;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 120px; /* hauteur du header */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(
+    360deg,
+    rgba(227, 94, 80, 1) 0%,
+    rgba(239, 133, 122, 1) 40%,
+    rgba(250, 210, 206, 1) 100%
+    );
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #222;
+}
+
+/* --- header et la barre de navigation  --- */
+
+header {
+  position: fixed;  
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  background: #c0392b;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,.2);
+}
+
+header .barre {        
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+
+}
+
+.logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-liens {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-liens a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: color .2s ease;
+}
+
+.nav-liens a:hover,.nav-liens a.active { 
+  color: rgba(255, 193, 186, 0.9); 
+  border-bottom: 3px solid rgba(255, 193, 186, 0.9);
+}
+
+
+.titre-carte {
+  text-align: center;
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 2.5rem;
+  color: #c0392b;
+  font-weight: 700;
+  margin-top: 150px; 
+  letter-spacing: 1.2px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+form{
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 3px solid #c0392b ;
+    margin-top: 50%;
+}
+
+form  h1{
+    font-size: 20px;
+}
+
+form .separation{
+    width: 100%;
+    height: 1px;
+    background-color:#c0392b ;
+}
+
+form .formulaire{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+form .formulaire .boite{
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.formulaire .gauche input{
+    margin-top: 5px;
+    padding: 10px 5px 10px 30px ;
+    border: 1.5px solid #c0392b ;
+    outline-color: #c0392b ;
+    border-radius: 5px;
+}
+
+.formulaire .gauche i{
+    position: absolute;
+    left: 0;
+    top: 25px;
+    padding: 9px 8px;
+    color: #c0392b;
+}
+
+.droite{
+    margin-left: 40px;
+}
+
+.droite .boite{
+    height: 100%;
+}
+
+.droite .boite textarea{
+    margin-top: 5px;
+    padding:10px ;
+    background-color: #f8f8f8;
+    border: 1.5px solid #c0392b;
+    outline-color: #c0392b;
+    border-radius: 5px;
+    resize: none;
+    height: 73%;
+}
+
+.pied-formulaire button{
+    margin-top: 10px;
+    background-color: #c0392b;
+    color: white;
+    font-size: 15px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.pied-formulaire button:hover{
+    transform: scale(1.05);
+
+}
+
+
+/* --- MENU HAMBURGER --- */
+
+.menu-toggle {
+  display: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* responsive et animation du hamburger pour les petits écrans */
+@media(max-width:995px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 4rem;
+        z-index: 101;
+    }
+
+    /* Animation du hamburger (croix quand ouvert) */
+    .menu-toggle.open i::before {
+        content: "\f00d"; 
+    }
+}
+
+
+/*Responsive*/
+
+@media screen and (max-width:920px){
+    .droite{
+    margin-left: 0px;
+    }
+    
+}
+
+
+/*Responsive pour le contact*/
+@media(max-width:1000px){
+    .contact{
+        gap:4rem;
+    }
+}
+
+@media(max-width:995px){
+    .contact{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+}
+
+
+
+
