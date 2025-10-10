@@ -1,0 +1,67 @@
+
+<!-- Video youtube pour la page contact: https://youtu.be/W77XNwZKpuE?si=jVomPiquhDAJOYBo -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="contact.css" type="text/css">
+    
+    <!-- Lien vers Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+     <header>
+        <nav class="barre">
+            <h1 class="logo">🍣🍱- Sakura Sushi</h1>
+            <div class="nav-liens">
+                <a href="index.html" >Accueil</a>
+                <a href="carte.html">Carte</a>
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <section class="contact">
+    <form>
+        <h1>Contactez-moi !</h1>
+        <div class="separation"></div>
+        <div class="formulaire">
+            <div class="gauche">
+                <div class="boite">
+                    <label for="prenom">Votre prénom</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Benjamin Dupont" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="boite">
+                    <label for="prenom">Votre adresse e-mail</label>
+                    <input type="email" id="mail" name="mail" placeholder="Benjamin.Dupont91@gmail.com" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="boite">
+                    <label for="tel">Votre téléphone</label>
+                    <input type="tel" id="tel" name="tel" pattern="^(0[1-9])(?:[ _.-]?[0-9]{2}){4}$"  placeholder="ex: 06.21.58.76.88" required >
+                    <i class="fa-solid fa-mobile"></i>
+                </div>
+            </div>
+            <div class="droite">
+                <div class="boite">
+                    <label>Message</label>
+                    <textarea placeholder="Saissisez ici..."></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="pied-formulaire" align="center">
+            <button>Envoyer le message</button>
+        </div>
+    </form>
+    </section>
+    <script src="js/app.js"></script>
+    
+</body>
+</html>
