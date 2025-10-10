@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Poppins:wght@400;600&display=swap');
+
 /* Video youtube pour la page contact: https://youtu.be/W77XNwZKpuE?si=jVomPiquhDAJOYBo */
 
 *{
@@ -227,6 +229,7 @@ form .formulaire .boite{
         margin: 5rem 4rem;
     }
 }
+
 
 
 
