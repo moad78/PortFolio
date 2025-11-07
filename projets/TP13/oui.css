@@ -1,0 +1,10 @@
+body{
+    background-color: forestgreen;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}

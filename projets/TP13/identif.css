@@ -1,0 +1,25 @@
+
+body {
+    margin: 0;
+   background-color: aquamarine;
+    color: #1b2b34;
+
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+
+.connexion {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+
+
