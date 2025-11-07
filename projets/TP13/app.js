@@ -1,5 +1,5 @@
 function afftab(){
-    document.write("<table border)=2px width=30%");
+    document.write("<table border=2px width=30%");
     for(let i=0; i<=5; i++){
         document.write("<tr><td>"+ (i+1) +"</td><td>*</td><td>*</td></tr>");
     }
@@ -8,7 +8,7 @@ function afftab(){
 
 function afftab2(){
     var X = prompt("Entrez le nombre de ligne");
-    document.write("<table border)=2px width=30%");
+    document.write("<table border=2px width=30%");
     for(let i=1; i<=X; i++){
         document.write("<tr><td>"+i+"</td><td>*</td><td>*</td></tr>");
     }
@@ -42,4 +42,5 @@ function cdc(){
     document.write("Le mot contient " + mot.length +"caractères"+"<br>");
     document.write("La première lettre est" + mot.substr(0,1) +"<br>");
         
+
 }
