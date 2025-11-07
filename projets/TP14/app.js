@@ -31,4 +31,9 @@ function renitialiser(){
     document.getElementById("resultat2").value = "null";
     document.getElementById("resultat3").value = "null";
     document.getElementById("resultat4").value = "null";
+
+}
+
+function impression(){
+    window.print();
 }
