@@ -2,8 +2,9 @@ function ajouterLigne() {
     // Récupérer le tableau par son ID
     var nom = document.getElementById("nom").value;
     var age = document.getElementById("age").value;
+    var prenom = document.getElementById("prenom").value;
     
-    if (nom == "" || age == "") {
+    if (nom == "" || age == "" || prenom == "") {
         alert("Veuillez remplir les deux champs.");
 
     } else if (age < 10 || age > 20) {
@@ -13,7 +14,9 @@ function ajouterLigne() {
         var nouvelleLigne = tableau.insertRow(-1);
         var celluleNom = nouvelleLigne.insertCell(0);
         var celluleAge = nouvelleLigne.insertCell(1);
+        var cellulePrenom = nouvelleLigne.insertCell(2);
         celluleNom.innerHTML = nom;
         celluleAge.innerHTML = age;
+        cellulePrenom.innerHTML = prenom;
     }
 }
