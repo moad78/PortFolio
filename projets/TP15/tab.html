@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Tableau Dynamique</h2>
+
+    Nom: <br>
+    <input type="text" id="nom" placeholder="Entrez un nom" name="nom"><br>
+    Age: <br>
+    <input type="text" id="age" placeholder="Entrez un âge" name="age">
+    <br>
+    <br>
+
+    <table border="2" id="tableau">
+        <tr>
+            <th>Nom</th>
+            <th>Âge</th>
+        </tr>
+        <tr>
+            <td>Moad</td>
+            <td>19</td>
+        </tr>
+         <tr>
+            <td>John</td>
+            <td>30</td>
+        </tr>
+    </table>
+
+    <button onclick="ajouterLigne()">Ajouter une ligne</button>
+
+    <script src="tab.js"></script>
+</body>
+</html>
