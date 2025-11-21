@@ -17,12 +17,6 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Base de données : `agence_location_db`
---
-CREATE DATABASE IF NOT EXISTS 'agence_location_db';
-USE 'agence_location_db';
--- --------------------------------------------------------
 
 --
 -- Structure de la table `categories`
