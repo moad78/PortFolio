@@ -1,0 +1,68 @@
+<!-- Video youtube pour la page accueil: https://youtu.be/-u3vE84Wo_U?si=Xb3oAs-ysXqo82Ml -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+
+  <link rel="stylesheet" href="styles/styles.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <div class="brand">
+      <span class="brand__logo">🗂️</span>
+      <span class="brand__name">Mon portfolio</span>
+    </div>
+
+    <button class="menu-toggle" id="menu-toggle"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            aria-controls="menu-nav">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+
+    <nav id="menu-nav" class="nav">
+      <a class="active" href="#" aria-current="page">Accueil</a>
+      <a href="competences/index.html">Compétences</a>
+      <a href="projets/index.html">Projets</a>
+      <a href="contact/index.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="accueil">
+  <div class="accueil-img">
+    <img src="img/image_accueil.png" alt="Photo d'accueil">
+  </div>
+
+  <div class="accueil-contenue">
+    <h1>Salut, c'est <span>Moad</span></h1>
+    <h3 class="text-taper">Je suis un <span></span></h3>
+
+    <p><strong>
+      Etudiant en première année de BTS SIO au lycée Parc de Vilgénis à Massy,<br>
+      je suis passionné par le développement et je souhaite approfondir<br>
+      mes connaissances en programmation
+      afin de perfectionner mes compétences techniques.
+    </strong></p>
+
+    <div class="reseaux-sociaux-logo">
+      <a href="https://www.linkedin.com/in/moad-khennous-13a757383" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/moad78" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.tiktok.com/@khmoad_78?_t=ZN-8zyAbZCq3fS&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://www.instagram.com/moad_k78?igsh=cGloamkyd2ttejRv&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+
+    <a href="projets/index.html" class="projets">Voir mes projets</a>
+  </div>
+</section>
+
+<script src="js/app.js"></script>
+</body>
+</html>
