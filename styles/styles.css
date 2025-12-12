@@ -1,0 +1,327 @@
+/* ===== Accueil — CSS clean & cohérent Projets/Compétences ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Reset */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  text-decoration:none;
+  border:none;
+  outline:none;
+}
+
+html{ font-size:62.5%; }
+
+body{
+  width:100%;
+  min-height:100vh;
+  overflow-x:hidden;
+  background-color:#F5E6C8;
+  color:#1C1C1C;
+  font-family:'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  /* IMPORTANT : laisse de la place au header fixe */
+  padding-top: 92px;
+}
+
+/* ===== Container (identique) ===== */
+.wrap{
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+/* ===== Header identique Projets/Compétences ===== */
+.topbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.topbar__inner{
+  margin: 12px auto;
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: rgba(245, 230, 200, .85);
+  border: 1px solid rgba(58,125,68,.18);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+/* Brand */
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+.brand__logo{
+  width: 40px;
+  height: 40px;
+  display:grid;
+  place-items:center;
+  border-radius: 14px;
+  background: rgba(203,231,207,.85);
+  border: 1px solid rgba(58,125,68,.20);
+}
+.brand__name{
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: #3A7D44;
+}
+
+/* Nav desktop (IMPORTANT : uniquement .nav, pas nav) */
+.nav{
+  display:flex;
+  align-items:center;
+  gap: 18px;
+}
+.nav a{
+  font-size: 1.5rem;
+  color: #3A7D44;
+  text-decoration: none;
+  font-weight: 800;
+  padding: 8px 10px;
+  border-radius: 12px;
+  transition: transform .15s ease, background-color .2s ease;
+}
+.nav a:hover{
+  background: rgba(203,231,207,.90);
+  transform: translateY(-1px);
+}
+.nav a.active{
+  background: rgba(58,125,68,.10);
+  border: 1px solid rgba(58,125,68,.20);
+}
+
+/* Hamburger (identique) */
+.menu-toggle{
+  display: none; /* visible seulement en <995px */
+  border: 1px solid rgba(58,125,68,.22);
+  background: rgba(255,255,255,.65);
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  cursor: pointer;
+  color: #3A7D44;
+}
+.menu-toggle i{ font-size: 2rem; }
+
+/* Responsive nav (identique Projets/Compétences) */
+@media (max-width: 995px){
+  .menu-toggle{ display: inline-grid; place-items:center; }
+
+  .nav{
+    position: absolute;
+    right: 4vw;
+    top: 84px;
+    width: min(320px, 86vw);
+    padding: 12px;
+    border-radius: 18px;
+    background: rgba(245, 230, 200, .95);
+    border: 1px solid rgba(58,125,68,.22);
+    box-shadow: 0 16px 40px rgba(0,0,0,.10);
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    z-index: 200;
+  }
+
+  .nav.active{ display: flex; }
+
+  .nav a{
+    display:block;
+    text-align:center;
+    font-size: 1.6rem;
+    margin:0;
+    padding: 10px 12px;
+  }
+}
+
+/* ===== Sections layout ===== */
+section{
+  min-height: calc(100vh - 92px);
+  padding: 5rem 0;
+}
+
+/* ===== Accueil hero ===== */
+.accueil{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 8rem;
+}
+
+.accueil-contenue{
+  max-width: 560px;
+}
+
+.accueil .accueil-contenue h1{
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+span{ color:#3A7D44; }
+
+.accueil-contenue h3{
+  font-size: 3.6rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+p{
+  font-size: 1.9rem;
+  line-height: 1.55;
+  color: rgba(28,28,28,.85);
+}
+
+/* Image */
+.accueil-img{
+  border-radius: 50%;
+}
+.accueil-img img{
+  width: 34vw;       
+  max-width: 420px;  
+  min-width: 260px;  
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .2s ease;
+  box-shadow: 0 14px 32px rgba(0,0,0,.12);
+}
+
+.accueil-img img:hover{
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 18px 44px rgba(0,0,0,.16);
+}
+
+/* Réseaux */
+.reseaux-sociaux-logo a{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  width: 4.2rem;
+  height: 4.2rem;
+  background-color: transparent;
+  border: 0.2rem solid #3A7D44;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 2.4rem 1.4rem 2.4rem 0;
+  transition: transform .18s ease, background-color .2s ease, box-shadow .2s ease, color .2s ease;
+  color: #3A7D44;
+}
+.reseaux-sociaux-logo a:hover{
+  color: #F5E6C8;
+  transform: translateY(-4px) scale(1.08);
+  background-color: #3A7D44;
+  box-shadow: 0 0 22px rgba(58,125,68,.45);
+}
+
+/* Bouton projets */
+.projets{
+  display:inline-block;
+  padding: 1.1rem 2.8rem;
+  background-color: transparent;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  color: #3A7D44;
+  letter-spacing: .1rem;
+  font-weight: 800;
+  border: 2px solid #3A7D44;
+  transition: transform .18s ease, background-color .2s ease, box-shadow .2s ease, color .2s ease;
+  cursor: pointer;
+}
+.projets:hover{
+  transform: translateY(-2px);
+  background-color: #3A7D44;
+  color: #F5E6C8;
+  box-shadow: 0 0 22px rgba(58,125,68,.40);
+}
+
+/* ===== Text “taper” (corrigé) ===== */
+.text-taper{
+  font-size: 3.2rem;
+  font-weight: 800;
+  min-width: 280px;
+}
+
+.text-taper span{
+  position: relative;
+  padding-right: 6px;
+}
+
+.text-taper span::before{
+  content: "Developper";
+  color: #3A7D44;
+  animation: words 20s infinite;
+}
+
+.text-taper span::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -6px;                  
+  height: 100%;
+  border-right: 3px solid #F5E6C8; 
+  animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+  to{ border-right: 3px solid #3A7D44; }
+}
+
+
+@keyframes words{
+  0%, 20%{ content:"Etudiant BTS"; }
+  21%, 40%{ content:"Dev Junior"; }
+  41%, 60%{ content:"Programmeur Junior"; }
+  61%, 80%{ content:"Gamer"; }
+  81%, 100%{ content:"Sportif"; }
+}
+
+/* ===== Responsive accueil ===== */
+@media (max-width: 1000px){
+  .accueil{ gap: 4rem; }
+}
+
+@media (max-width: 995px){
+  section{
+    padding: 3.6rem 0;
+  }
+
+  .accueil{
+    flex-direction: column;
+    text-align:center;
+    gap: 3rem;
+  }
+
+  .accueil-contenue{
+    max-width: 720px;
+  }
+
+  .accueil .accueil-contenue h1{
+    font-size: 4.8rem;
+  }
+
+  .accueil .accueil-contenue h3{
+    font-size: 2.6rem;
+  }
+
+  .accueil-img img{
+  width: 78vw;        
+  max-width: 420px;   
+  margin-top: 1rem;
+}
+
+
+  .reseaux-sociaux-logo a{
+    margin: 2rem 1rem 2rem 0;
+  }
+}
