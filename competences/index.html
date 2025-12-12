@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compétences</title>
+
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="brand">
+        <span class="brand__logo">🧠</span>
+        <span class="brand__name">Compétences</span>
+      </div>
+
+      <button class="menu-toggle" id="menu-toggle"
+              aria-label="Ouvrir le menu"
+              aria-expanded="false"
+              aria-controls="menu-nav">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <nav id="menu-nav" class="nav">
+        <a href="../index.html">Accueil</a>
+        <a class="active" href="#" aria-current="page">Compétences</a>
+        <a href="../projets/index.html">Projets</a>
+        <a href="../contact/index.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="contenu">
+
+    <section class="hero reveal">
+      <h1>Mes compétences 💪</h1>
+      <p>Technos et outils que j’utilise en TP, projets et auto-formation.</p>
+
+      <div class="chips">
+        <span class="chip">Web</span>
+        <span class="chip">Programmation</span>
+        <span class="chip">Données</span>
+        <span class="chip">Outils</span>
+      </div>
+    </section>
+
+    <section class="section reveal" aria-labelledby="liste-competences">
+      <h2 id="liste-competences">Stack & outils ⭐</h2>
+
+      <div class="competence-container">
+        <div class="competence-case" data-tilt>
+          <a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank" rel="noreferrer">
+            <img src="image/HTML5.png" alt="Logo HTML" loading="lazy">
+          </a>
+          <p>HTML</p>
+          <span class="tag">🌐 Web</span>
+        </div>
+
+        <div class="competence-case" data-tilt>
+          <a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank" rel="noreferrer">
+            <img src="image/CSS.png" alt="Logo CSS" loading="lazy">
+          </a>
+          <p>CSS</p>
+          <span class="tag">🎨 UI</span>
+        </div>
+
+        <div class="competence-case" data-tilt>
+          <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank" rel="noreferrer">
+            <img src="image/JavaScript.png" alt="Logo JavaScript" loading="lazy">
+          </a>
+          <p>JavaScript</p>
+          <span class="tag">⚡ Front</span>
+        </div>
+
+        <div class="competence-case" data-tilt>
+          <a href="https://fr.wikipedia.org/wiki/Python_(langage)" target="_blank" rel="noreferrer">
+            <img src="image/Python.png" alt="Logo Python" loading="lazy">
+          </a>
+          <p>Python</p>
+          <span class="tag">🐍 Algo</span>
+        </div>
+
+        <div class="competence-case" data-tilt>
+          <a href="https://fr.wikipedia.org/wiki/Structured_Query_Language" target="_blank" rel="noreferrer">
+            <img src="image/sql.png" alt="Logo SQL" loading="lazy">
+          </a>
+          <p>SQL</p>
+          <span class="tag">🗄️ Données</span>
+        </div>
+
+        <div class="competence-case" data-tilt>
+          <a href="https://www.virtualbox.org/" target="_blank" rel="noreferrer">
+            <img src="image/vb.webp" alt="Logo VirtualBox" loading="lazy">
+          </a>
+          <p>VirtualBox</p>
+          <span class="tag">🧩 VM</span>
+        </div>
+
+        <div class="competence-case" data-tilt>
+          <a href="https://www.microsoft.com/fr-fr/microsoft-365/excel" target="_blank" rel="noreferrer">
+            <img src="image/Excel.png" alt="Logo Excel" loading="lazy">
+          </a>
+          <p>Excel</p>
+          <span class="tag">📊 Outil</span>
+        </div>
+
+        <div class="competence-case" data-tilt>
+          <a href="https://www.microsoft.com/fr-fr/microsoft-365/word" target="_blank" rel="noreferrer">
+            <img src="image/word.png" alt="Logo Word" loading="lazy">
+          </a>
+          <p>Word</p>
+          <span class="tag">📝 Doc</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 — Portfolio</p>
+  </footer>
+
+  <script src="competences.js"></script>
+</body>
+</html>
