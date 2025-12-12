@@ -1,65 +1,91 @@
-<!-- Video youtube pour la page contact: https://youtu.be/W77XNwZKpuE?si=jVomPiquhDAJOYBo -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../styles/styles.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Lien vers Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+
+  <link rel="stylesheet" href="contact.css">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
-    <div class="menu-toggle" id="menu-toggle">
-        <i class="fa-solid fa-bars"></i>
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <div class="brand">
+      <span class="brand__logo">📩</span>
+      <span class="brand__name">Contact</span>
     </div>
-    <header>
-        <nav>
-            <a href="../index.html">Acceuil</a>
-            <a href="../competences/index.html">Compétences</a>
-            <a href="../projets/index.html">Projets</a>
-            <a href="#" class="active">Contact</a>
-        </nav>
-    </header>
-    <section class="contact">
-    <form>
-        <h1>Contactez-moi !</h1>
-        <div class="separation"></div>
-        <div class="formulaire">
-            <div class="gauche">
-                <div class="boite">
-                    <label for="prenom">Votre prénom</label>
-                    <input type="text" id="prenom" name="prenom" placeholder="Benjamin Dupont" required>
-                    <i class="fa-solid fa-user"></i>
-                </div>
-                <div class="boite">
-                    <label for="prenom">Votre adresse e-mail</label>
-                    <input type="email" id="mail" name="mail" placeholder="Benjamin.Dupont91@gmail.com" required>
-                    <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div class="boite">
-                    <label for="tel">Votre téléphone</label>
-                    <input type="tel" id="tel" name="tel" pattern="^(0[1-9])(?:[ _.-]?[0-9]{2}){4}$"  placeholder="ex: 06.21.58.76.88" required >
-                    <i class="fa-solid fa-mobile"></i>
-                </div>
-            </div>
-            <div class="droite">
-                <div class="boite">
-                    <label>Message</label>
-                    <textarea placeholder="Saissisez ici..."></textarea>
-                </div>
-            </div>
+
+    <button class="menu-toggle" id="menu-toggle"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            aria-controls="menu-nav">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav id="menu-nav" class="nav">
+      <a href="../index.html">Accueil</a>
+      <a href="../competences/index.html">Compétences</a>
+      <a href="../projets/index.html">Projets</a>
+      <a class="active" href="#">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="contact-section reveal">
+
+    <form class="contact-form" action="send.php" method="POST">
+      <h1>Contactez-moi ✨</h1>
+      <p class="subtitle">Une question ou un projet ? Écris-moi 👇</p>
+
+      <div class="separator"></div>
+
+      <div class="form-grid">
+        <div class="left">
+
+          <div class="field">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Benjamin Dupont" required>
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <div class="field">
+            <label for="mail">Email</label>
+            <input type="email" id="mail" name="mail" placeholder="benjamin@email.com" required>
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+
+          <div class="field">
+            <label for="tel">Téléphone</label>
+            <input type="tel" id="tel" name="tel" pattern="^(0[1-9])(?:[ _.-]?[0-9]{2}){4}$" placeholder="06 12 34 56 78" required>
+            <i class="fa-solid fa-phone"></i>
+          </div>
+
         </div>
-        <div class="pied-formulaire" align="center">
-            <button>Envoyer le message</button>
+
+        <div class="right">
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
+          </div>
         </div>
+      </div>
+
+      <div class="form-footer">
+        <button type="submit" class="btn-send">
+          Envoyer <span>🚀</span>
+        </button>
+      </div>
     </form>
-    </section>
-    <script src="../js/app.js"></script>
-    
+
+  </section>
+</main>
+
+<script src="contact.js"></script>
 </body>
 </html>
